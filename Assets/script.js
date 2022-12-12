@@ -18,7 +18,7 @@ function generatePassword() {
   var  passwordLength = prompt("How long do you want your password to be? (between 8-128 characters");
 
   // Run this code if all criteria for  password length is met
-  if (parseInt(passwordLength) >= 8 && parseInt(passwordLength) <= 128); {
+  if (parseInt(passwordLength) >= 8 && parseInt(passwordLength) <= 128) {
 
    // Below are items allowed to be in the password using an array
     var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -69,13 +69,14 @@ function generatePassword() {
       password =  password.concat(passwordSet[randomNumber])
     };
 
+    // found method to link variables for passowrd combinatins to the password generator
     password = password.toString("")
 
     return password;
   }
 
   else {
-
+    // message that will display if user does not follow instructions
     alert("You must enter a number between 8 and 128 to proceed.")
   }
 }
