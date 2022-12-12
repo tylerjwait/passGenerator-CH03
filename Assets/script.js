@@ -7,7 +7,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
@@ -43,34 +42,34 @@ function generatePassword() {
     };
 
     // include UPPER CASE characters or not to include UPPER CASE characters
-    var chooseupperCase = confirm("Include UPPER CASE characters? Cancel / Ok")
-    if (chooseupperCase == true) {
+    var chooseUpperCase = confirm("Include UPPER CASE characters? Cancel / Ok")
+    if (chooseUpperCase == true) {
       passwordSet = passwordSet.concat(upperCase)
     };
 
     // include lower case characters or not to include lower case characters
-    var chooselowerCase = confirm("Include lower case characters? Cancel / Ok")
-    if (chooselowerCase == true) {
+    var chooseLowerCase = confirm("Include lower case characters? Cancel / Ok")
+    if (chooseLowerCase == true) {
       passwordSet = passwordSet.concat(lowerCase)
     };
     
     // error pop up if nothing was selected from variables above
-    if (chooseNumber == false && chooseSpecial == false && chooselowerCase == false && chooseupperCase == false) {
+    if (chooseSpecial == false && chooseNumber == false && chooseUpperCase == false && chooseLowerCase == false) {
       // send error message
       alert ("You must choose ONE or more of the password criteria.")
     }
     // below will display the actual method of generating a random password
-    for (i =0; i < passwordLength; i++) {
+    for (index =0; index < passwordLength; index++) {
 
       // I wasnt sure about these math variables so it took some time to find what I wanted to do on MDN
-      var randomNumber = MAth.floor(MAth.random() * passwordSet.length);
+      var randomNumber = Math.floor(Math.random() * passwordSet.length);
      
       // password variable  will now work with the Math algorithm to generate a random password
       password =  password.concat(passwordSet[randomNumber])
     };
 
     // found method to link variables for passowrd combinatins to the password generator
-    password = password.toString("")
+    password = password.join("")
 
     return password;
   }
