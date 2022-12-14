@@ -35,4 +35,5 @@ THEN the password is either displayed in an alert or written to the page
 
 ![passGenerator](https://github.com/tylerjwait/passGenerator-CH03/blob/main/Assets/Screenshot-passGenerator.png)
 
-
+REPO--https://github.com/tylerjwait/passGenerator-CH03
+DEPLOYED SITE--https://tylerjwait.github.io/passGenerator-CH03/
